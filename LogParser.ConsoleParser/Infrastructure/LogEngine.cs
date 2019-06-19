@@ -185,7 +185,8 @@ namespace LogParser.ConsoleParser.Infrastructure
                 Params = rowLogItem.Params,
                 Route = routes.GetRouteOrCreate(rowLogItem),
                 IpAddress = dbips.GetIpAddressOrCreate(rowLogItem, countries),
-                StatusCode = _restStatusCodes.GetStatusCode(rowLogItem)
+                StatusCode = _restStatusCodes.GetStatusCode(rowLogItem),
+                ResponseSize = rowLogItem.GetResponseSize()
             };
         }
 

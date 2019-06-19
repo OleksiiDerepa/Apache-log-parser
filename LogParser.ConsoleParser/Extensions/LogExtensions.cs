@@ -145,5 +145,11 @@ namespace LogParser.ConsoleParser.Extensions
                 return x;
             };
         }
+        public static long GetResponseSize(this RowLogItem rowLogItem)
+        {
+            long.TryParse(rowLogItem.ResponseSize, out long size);
+            return size;
+        }
+
     }
 }

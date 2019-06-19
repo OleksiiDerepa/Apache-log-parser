@@ -6,7 +6,11 @@ namespace LogParser.Infrastructure.Validation
     {
         public static void IsValid(DateTimeOffset? start,DateTimeOffset? end, Func<string> message)
         {
-            IsTrue(start != null && end != null && start <= end, message);
+            bool condition = start == null
+                || end == null
+                || (start != null && end != null && start <= end);
+
+            IsTrue(condition, message);
         }
         public static void IsValid(DateTimeOffset start, DateTimeOffset end, Func<string> message)
         {

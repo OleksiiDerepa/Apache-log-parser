@@ -6,6 +6,8 @@ namespace LogParser.DAL.Entities
     {
         public long Id { get; set; }
         public string Params { get; set; }
+        public long ResponseSize { get; set; }
+
         public DateTimeOffset Date { get; set; }
 
         public Address IpAddress { get; set; }

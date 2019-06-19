@@ -20,6 +20,7 @@ namespace LogParser.BLL.MappingProfiles
                 .ForMember(d => d.Route, o => o.MapFrom(s => s.Route.Name))
                 .ForMember(d => d.Method, o => o.MapFrom(s => s.Method.Name))
                 .ForMember(d => d.Protocol, o => o.MapFrom(s => s.Protocol.Name))
+                .ForMember(d => d.Size, o => o.MapFrom(s => s.ResponseSize))
                 .ForMember(d => d.StatusCode, o => o.MapFrom(s => s.StatusCode.Number));
         }
     }
